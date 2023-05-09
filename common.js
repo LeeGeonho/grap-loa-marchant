@@ -69,7 +69,7 @@ module.exports.getImageUrl = (data) => {
   continent = continent.replaceAll(/[ ]/g, "_");
   zone = zone.replaceAll(/[()]/g, "");
   zone = zone.replaceAll(/[ ]/g, "_");
-  return `https://cdn.korlark.com/images/merchant/maps/${continent}/${zone}.png`;
+  return `${process.env.URL_KLOA_MAP}/${continent}/${zone}.png`;
 };
 // 1:루페온, 2:실리안, 3:아만
 module.exports.myWishList = {
