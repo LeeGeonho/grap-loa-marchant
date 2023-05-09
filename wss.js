@@ -67,6 +67,7 @@ const connectSocket = (client) => {
         setInterval(() => {
           pendingCnt++;
           if (pendingCnt > +process.env.MAX_PENDING_COUNT) {
+            console.error("request count is over. restarting...");
             process.exit(0);
           }
 
